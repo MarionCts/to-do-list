@@ -23,11 +23,27 @@ body {
   color: #FFFFFF;
   padding: 0.4rem 1.5rem;
   border-radius: 0 1rem 0 0;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  transition: all 0.3s linear;
+}
+.primary-button:hover {
+  background-color: #FFFFFF;
+  color: #2E2E2E;
 }
 
 .container {
   display: flex;
   margin: 2rem 0 1rem;
+}
+@media screen and (max-width: 400px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 3rem;
+  }
 }
 
 h1 {
@@ -38,11 +54,24 @@ h1 {
 
 #taskInput {
   padding: 0.5rem;
+  width: 20rem;
   border: none;
   border-radius: 1rem 0 0 0;
 }
-#taskInput .primary-button {
+@media screen and (max-width: 400px) {
+  #taskInput {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+  }
+}
+
+.primary-button {
   border-radius: 0 1rem 0 0;
+}
+@media screen and (max-width: 400px) {
+  .primary-button {
+    border-radius: 0 0 1rem 1rem;
+  }
 }
 
 ul {
@@ -85,4 +114,8 @@ ul li button img {
 
 .lineThrough {
   text-decoration: line-through;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
