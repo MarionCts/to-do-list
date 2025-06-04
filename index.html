@@ -6,12 +6,17 @@
     <title>To Do List</title>
     <script src="assets/script.js" defer></script>
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h1>Ma liste de tâches</h1>
-    <input id="taskInput" placeholder="Nouvelle tâche" />
-    <button id="addBtn">Ajouter</button>
+  <body> 
+      <h1>Check<span class="italic-accent">list</span></h1>
+      <div class="container">
+        <input id="taskInput" placeholder="Nouvelle tâche" />
+        <button id="addBtn" class="primary-button">Ajouter</button>
+      </div>
     <ul id="taskList"></ul>
-    <button id="clearBtn">Tout effacer</button>
+    <button id="clearBtn" class="primary-button">Tout effacer</button>
   </body>
 </html>
