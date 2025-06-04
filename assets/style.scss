@@ -61,7 +61,7 @@ h1 {
 }
 
 #taskInput {
-    padding: .5rem;
+    padding: .8rem;
     width: 20rem;
     border: none;
     border-radius: 1rem 0 0 0;
@@ -92,6 +92,15 @@ ul {
         list-style: none;
         display: flex;
         align-items: center;
+
+        input[type="text"]:disabled {
+            background-color: transparent;
+            border: none;
+            &::placeholder {
+                color: #FFFFFF;
+                font-size: 1rem;
+            }
+        }
 
         input[type="checkbox"] {
             margin-right: 0.5rem;

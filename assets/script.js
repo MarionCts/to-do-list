@@ -55,6 +55,17 @@ const render = () => {
     let label = document.createElement("label");
     label.textContent = task.tache;
 
+    // let label = document.createElement("input");
+    // label.type = "text";
+    // label.name = "label";
+    // label.setAttribute("disabled", "");
+    // label.setAttribute("placeholder", task.tache);
+
+    // createTask.addEventListener("dblclick", function () {
+    //     label.removeAttribute("disabled");
+    //     label.focus();
+    // })
+
     if (task.done) {
       label.classList.add("lineThrough");
     }
