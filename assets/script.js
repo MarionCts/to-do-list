@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const addBtn = document.querySelector("#addBtn");
 const taskInput = document.querySelector("#taskInput");
 const taskList = document.querySelector("#taskList");
@@ -5,8 +6,9 @@ const clearBtn = document.querySelector("#clearBtn");
 let taskText;
 const savedTask = localStorage.getItem("tache");
 
-// Liste des tâches
+// TASKS LIST
 const tasks = savedTask ? JSON.parse(savedTask) : [];
+// const tasksDone = savedTask ? JSON.parse(savedTask) : [];
 
 const nettoyerDOM = () => {
   while (taskList.firstChild) {
@@ -19,6 +21,22 @@ const removeClearBtn = () => {
     clearBtn.classList.add("hide");
   } else {
     clearBtn.classList.remove("hide");
+  }
+};
+
+removeClearBtn();
+
+const counter = document.createElement("span");
+counter.id = "counter";
+body.append(counter);
+
+const updateCounter = () => {
+  let countingTasks = tasks.filter((task) => !task.done).length;
+
+  if (countingTasks > 1) {
+    counter.textContent = `Il reste ${countingTasks} tâches à effectuer.`;
+  } else {
+    counter.textContent = `Il reste ${countingTasks} tâche à effectuer.`;
   }
 };
 
@@ -63,10 +81,12 @@ const render = () => {
       task.done = checkbox.checked;
       label.classList.toggle("lineThrough", task.done);
       localStorage.setItem("tache", JSON.stringify(tasks));
+      updateCounter();
     });
-  }
 
-  removeClearBtn();
+    removeClearBtn();
+  }
+  updateCounter();
 };
 
 addBtn.addEventListener("click", function () {
@@ -80,23 +100,25 @@ addBtn.addEventListener("click", function () {
   render();
 });
 
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        taskText = taskInput.value.trim();
-        if (taskText === "") return;
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    taskText = taskInput.value.trim();
+    if (taskText === "") return;
 
-        const newTask = { tache: taskText, done: false };
-        tasks.push(newTask);
-        localStorage.setItem("tache", JSON.stringify(tasks));
-        taskInput.value = "";
-        render();
-    }
+    const newTask = { tache: taskText, done: false };
+    tasks.push(newTask);
+    localStorage.setItem("tache", JSON.stringify(tasks));
+    taskInput.value = "";
+    render();
+  }
 });
 
 clearBtn.addEventListener("click", function () {
-  tasks.length = 0;
+  tasks.splice(0, tasks.length);
   localStorage.clear();
+  removeClearBtn();
   render();
 });
 
+removeClearBtn;
 render();
