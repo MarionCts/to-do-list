@@ -16,25 +16,29 @@ const nettoyerDOM = () => {
   }
 };
 
+const counter = document.createElement("span");
+counter.id = "counter";
+body.append(counter);
+
 const removeClearBtn = () => {
   if (tasks.length === 0) {
     clearBtn.classList.add("hide");
+    counter.classList.add("hide");
   } else {
     clearBtn.classList.remove("hide");
+    counter.classList.remove("hide");
   }
 };
 
 removeClearBtn();
-
-const counter = document.createElement("span");
-counter.id = "counter";
-body.append(counter);
 
 const updateCounter = () => {
   let countingTasks = tasks.filter((task) => !task.done).length;
 
   if (countingTasks > 1) {
     counter.textContent = `Il reste ${countingTasks} tâches à effectuer.`;
+  } else if (countingTasks === 0) {
+    counter.textContent = `Bravo, vous avez terminé toutes les tâches !`;
   } else {
     counter.textContent = `Il reste ${countingTasks} tâche à effectuer.`;
   }

@@ -27,7 +27,7 @@ body {
     background-color: transparent;
     border: .1rem solid #FFFFFF;
     color: #FFFFFF;
-    padding: .4rem 1.5rem;
+    padding: .8rem 1.5rem;
     border-radius: 0 1rem 0 0;
     font-weight: 600;
     font-size: 0.7rem;
@@ -124,11 +124,12 @@ ul {
 }
 
 #clearBtn {
+    margin-top: 1rem;
     border-radius: 0 1rem 0 1rem;
 }
 
 #counter {
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: .9rem;
 }
 
