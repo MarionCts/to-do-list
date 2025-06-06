@@ -13,7 +13,7 @@ This project was developed to:
 
 ### ⚙️ Features
 
- **Add tasks:** Enter a task using an input field and add it to the list.
+- **Add tasks:** Enter a task using an input field and add it to the list.
 
 - **Delete tasks:** Remove individual tasks from the list.
 
