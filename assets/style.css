@@ -94,17 +94,8 @@ ul li {
   display: flex;
   align-items: center;
 }
-ul li input[type=text]:disabled {
-  background-color: transparent;
-  border: none;
-}
-ul li input[type=text]:disabled::-moz-placeholder {
-  color: #FFFFFF;
-  font-size: 1rem;
-}
-ul li input[type=text]:disabled::placeholder {
-  color: #FFFFFF;
-  font-size: 1rem;
+ul li label {
+  line-height: 1.5rem;
 }
 ul li input[type=checkbox] {
   margin-right: 0.5rem;

@@ -8,7 +8,6 @@ const savedTask = localStorage.getItem("task");
 
 // TASKS LIST
 const tasks = savedTask ? JSON.parse(savedTask) : [];
-// const tasksDone = savedTask ? JSON.parse(savedTask) : [];
 
 const clearDOM = () => {
   while (taskList.firstChild) {
@@ -58,17 +57,6 @@ const render = () => {
 
     let label = document.createElement("label");
     label.textContent = task.task;
-
-    // let label = document.createElement("input");
-    // label.type = "text";
-    // label.name = "label";
-    // label.setAttribute("disabled", "");
-    // label.setAttribute("placeholder", task.task);
-
-    // createTask.addEventListener("dblclick", function () {
-    //     label.removeAttribute("disabled");
-    //     label.focus();
-    // })
 
     if (task.done) {
       label.classList.add("lineThrough");

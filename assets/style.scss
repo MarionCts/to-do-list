@@ -99,13 +99,8 @@ ul {
         display: flex;
         align-items: center;
 
-        input[type="text"]:disabled {
-            background-color: transparent;
-            border: none;
-            &::placeholder {
-                color: #FFFFFF;
-                font-size: 1rem;
-            }
+        label {
+            line-height: 1.5rem;
         }
 
         input[type="checkbox"] {
