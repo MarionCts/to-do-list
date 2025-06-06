@@ -1,12 +1,27 @@
-### Instructions
+### 🎯 Learning Goals
 
-1. Build a To-Do List using HTML, CSS, and JavaScript
+This project was developed to:
 
-2. Use localStorage to persist task data
+**Strengthen core skills** in HTML, CSS, and JavaScript.
 
-3. Implement a function to remove tasks
+**Understand and implement** local data storage using localStorage.
 
-4. Implement a function to count the number of tasks remaining
+** - Apply DOM manipulation** and event handling concepts.
+
+** - Organize a web project** with clarity and maintainability.
+
+
+###⚙️ Features
+
+** - Add tasks:** Enter a task using an input field and add it to the list.
+
+* - Delete tasks:** Remove individual tasks from the list.
+
+** - Task counter:** Dynamically display the number of pending tasks.
+
+** - Data persistence:** Automatically saves tasks in the browser using localStorage.
+
+** - Responsive design:** Adapts smoothly to various screen sizes.
 
 
 ### Screenshot
