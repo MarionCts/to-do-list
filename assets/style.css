@@ -7,8 +7,8 @@
 body {
   min-height: 100vh;
   padding: 5rem 0;
-  background-color: #2E2E2E;
-  color: #FFFFFF;
+  background-color: #2e2e2e;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,8 +20,8 @@ body {
 .primary-button {
   cursor: pointer;
   background-color: transparent;
-  border: 0.1rem solid #FFFFFF;
-  color: #FFFFFF;
+  border: 0.1rem solid #ffffff;
+  color: #ffffff;
   padding: 0.8rem 1.5rem;
   border-radius: 0 1rem 0 0;
   font-weight: 600;
@@ -31,8 +31,8 @@ body {
   transition: all 0.3s linear;
 }
 .primary-button:hover {
-  background-color: #FFFFFF;
-  color: #2E2E2E;
+  background-color: #ffffff;
+  color: #2e2e2e;
 }
 
 .container {

@@ -60,17 +60,23 @@ const render = () => {
 
     if (task.done) {
       label.classList.add("lineThrough");
+      taskList.appendChild(createTask);
     }
 
     let createRemoveBtn = document.createElement("button");
     let removeBtn = document.createElement("img");
     removeBtn.src = "img/remove.svg";
 
-    taskList.append(createTask);
     createTask.append(checkbox);
     createTask.append(label);
     createTask.append(createRemoveBtn);
     createRemoveBtn.append(removeBtn);
+
+    if (task.done) {
+      taskList.appendChild(createTask);
+    } else {
+      taskList.prepend(createTask);
+    }
 
     createRemoveBtn.addEventListener("click", function () {
       let currentTask = tasks.indexOf(task);
@@ -85,6 +91,7 @@ const render = () => {
       label.classList.toggle("lineThrough", task.done);
       localStorage.setItem("task", JSON.stringify(tasks));
       updateCounter();
+      render();
     });
 
     removeClearBtn();

@@ -1,149 +1,149 @@
 // RESET CSS
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 // BODY CONTAINER
 
 body {
-    min-height: 100vh;
-    padding: 5rem 0;
-    background-color: #2E2E2E;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 62.5%;
+  min-height: 100vh;
+  padding: 5rem 0;
+  background-color: #2e2e2e;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
 }
 
 // MAIN BUTTON STYLE
 
 .primary-button {
-    cursor: pointer;
-    background-color: transparent;
-    border: .1rem solid #FFFFFF;
-    color: #FFFFFF;
-    padding: .8rem 1.5rem;
-    border-radius: 0 1rem 0 0;
-    font-weight: 600;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    transition: all 0.3s linear;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0.1rem solid #ffffff;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0 1rem 0 0;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  transition: all 0.3s linear;
 
-    &:hover {
-        background-color: #FFFFFF;
-        color: #2E2E2E;
-    }
+  &:hover {
+    background-color: #ffffff;
+    color: #2e2e2e;
+  }
 }
 
 // GENERAL STYLES
 
 .container {
-    display: flex;
-    margin: 2rem 0 1rem;
+  display: flex;
+  margin: 2rem 0 1rem;
 
-    @media screen and (max-width: 400px) {
-        flex-direction: column;
-        width: 100%;
-        padding: 0 3rem;
-    }
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 3rem;
+  }
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
-    font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 3rem;
 }
 
 #taskInput {
-    padding: .8rem;
-    width: 20rem;
-    border: none;
-    border-radius: 1rem 0 0 0;
+  padding: 0.8rem;
+  width: 20rem;
+  border: none;
+  border-radius: 1rem 0 0 0;
 
-    @media screen and (max-width: 400px) {
-        border-radius: 1rem 1rem 0 0;
-        width: 100%;
-    }
+  @media screen and (max-width: 400px) {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+  }
 }
 
 .primary-button {
-        border-radius: 0 1rem 0 0;
+  border-radius: 0 1rem 0 0;
 
-        @media screen and (max-width: 400px) {
-                border-radius: 0 0 1rem 1rem;
-        }
-    }
+  @media screen and (max-width: 400px) {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
 
 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+  max-width: 28rem;
+
+  @media screen and (max-width: 400px) {
+    padding: 0 3rem;
+  }
+
+  li {
+    font-weight: 400;
+    font-size: 1rem;
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 2rem 0;
-    max-width: 28rem;
+    align-items: center;
 
-    @media screen and (max-width: 400px) {
-        padding: 0 3rem;
+    label {
+      line-height: 1.5rem;
     }
 
-    li {
-        font-weight: 400;
-        font-size: 1rem;
-        list-style: none;
-        display: flex;
-        align-items: center;
-
-        label {
-            line-height: 1.5rem;
-        }
-
-        input[type="checkbox"] {
-            margin-right: 0.5rem;
-        }
-
-        button {
-            cursor: pointer;
-            padding-left: 2rem;
-            margin-left: auto;
-            background-color: transparent;
-            border: none;
-            display: flex;
-            justify-content: center;
-
-            img {
-                height: .7rem;
-                width: .7rem;
-            }
-        }
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
     }
+
+    button {
+      cursor: pointer;
+      padding-left: 2rem;
+      margin-left: auto;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+
+      img {
+        height: 0.7rem;
+        width: 0.7rem;
+      }
+    }
+  }
 }
 
 #clearBtn {
-    margin-top: 1rem;
-    border-radius: 0 1rem 0 1rem;
+  margin-top: 1rem;
+  border-radius: 0 1rem 0 1rem;
 }
 
 #counter {
-    margin-top: 2rem;
-    font-size: .9rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
 }
 
 // ELEMENTS MODIFICATIONS
 
 .italic-accent {
-    font-style: italic;
+  font-style: italic;
 }
 
 .lineThrough {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
