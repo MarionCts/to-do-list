@@ -28,7 +28,7 @@ This project was developed to:
 
 ### Live preview
 
-- View the project live : [Live preview](https://marioncts.github.io/exo-bootstrap/)
+- View the project live : [Live preview](https://marioncts.github.io/to-do-list/)
 
 
 
@@ -62,7 +62,7 @@ Ce projet a été développé pour :
 
 ### Aperçu en direct
 
-- Testez le projet en ligne : [Voir le projet](https://marioncts.github.io/exo-bootstrap/)
+- Testez le projet en ligne : [Voir le projet](https://marioncts.github.io/to-do-list/)
 
 
 ### Screenshot
