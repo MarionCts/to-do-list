@@ -1,3 +1,5 @@
+![](./screenshot.png)
+
 ## [ENGLISH VERSION]
 
 ### 🎯 Learning Goals
@@ -64,7 +66,3 @@ Ce projet a été développé pour :
 
 - Testez le projet en ligne : [Voir le projet](https://marioncts.github.io/to-do-list/)
 
-
-### Screenshot
-
-![](./screenshot.png)
