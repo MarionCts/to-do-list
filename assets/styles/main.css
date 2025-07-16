@@ -4,58 +4,87 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+}
+
+.primary-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 5rem;
+}
+
+p, span, ul, li, .task__text {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.italic-accent {
+  font-style: italic;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+}
+
 body {
   min-height: 100vh;
   padding: 5rem 0;
-  background-color: #2e2e2e;
-  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  background-color: #202022;
+  color: #f1f0f9;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-family: "Inter", sans-serif;
-  font-size: 62.5%;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
 }
 
 .primary-button {
   cursor: pointer;
   background-color: transparent;
-  border: 0.1rem solid #ffffff;
-  color: #ffffff;
-  padding: 0.8rem 1.5rem;
+  border: 0.1rem solid #f1f0f9;
+  color: #f1f0f9;
+  padding: 1rem 3rem;
   border-radius: 0 1rem 0 0;
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   transition: all 0.3s linear;
 }
 .primary-button:hover {
-  background-color: #ffffff;
-  color: #2e2e2e;
+  background-color: #f1f0f9;
+  color: #202022;
 }
 
-.container {
+.task__container {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   margin: 2rem 0 1rem;
 }
 @media screen and (max-width: 400px) {
-  .container {
+  .task__container {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 0 3rem;
   }
 }
 
-h1 {
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
-  font-size: 3rem;
-}
-
 #taskInput {
-  padding: 0.8rem;
-  width: 20rem;
+  padding: 1.2rem;
+  width: 35rem;
   border: none;
   border-radius: 1rem 0 0 0;
 }
@@ -78,6 +107,8 @@ h1 {
 ul {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 1rem;
   margin: 2rem 0;
   max-width: 28rem;
@@ -89,16 +120,16 @@ ul {
 }
 ul li {
   font-weight: 400;
-  font-size: 1rem;
   list-style: none;
   display: flex;
   align-items: center;
 }
-ul li label {
+ul li .task__text {
   line-height: 1.5rem;
 }
 ul li input[type=checkbox] {
   margin-right: 0.5rem;
+  height: 1rem;
 }
 ul li button {
   cursor: pointer;
@@ -110,8 +141,8 @@ ul li button {
   justify-content: center;
 }
 ul li button img {
-  height: 0.7rem;
-  width: 0.7rem;
+  height: 1.1rem;
+  width: 1.1rem;
 }
 
 #clearBtn {
@@ -121,17 +152,4 @@ ul li button img {
 
 #counter {
   margin-top: 2rem;
-  font-size: 0.9rem;
-}
-
-.italic-accent {
-  font-style: italic;
-}
-
-.lineThrough {
-  text-decoration: line-through;
-}
-
-.hide {
-  display: none;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

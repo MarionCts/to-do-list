@@ -1,0 +1,33 @@
+// ********* IMPORT STYLES *********
+
+@use "variables" as *;
+
+// ************ MIXINS *************
+
+// FLEXBOX PRESET
+
+@mixin flex-preset($direction: row, $align: center, $justify: center) {
+
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+
+}
+
+// TYPOGRPAHY
+
+@mixin text-preset($type) {
+
+  @if $type == primary-title {
+    font-family: $serif;
+    font-weight: 500;
+    font-size: 5rem;
+
+  } @else if $type == paragraph {
+    font-family: $sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+  } 
+
+}

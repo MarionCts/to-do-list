@@ -1,0 +1,36 @@
+// ********* IMPORT STYLES *********
+
+@use "../abstracts" as *;
+
+
+// ********** TYPOGRAPHY ***********
+
+// TITLES
+
+.primary-title {
+
+  @include text-preset(primary-title);
+
+}
+
+// PARAGRAPH
+
+p, span, ul, li, .task__text {
+
+  @include text-preset(paragraph);
+
+}
+
+// TEXT MODIFICATIONS
+
+.italic-accent {
+
+  font-style: italic;
+
+}
+
+.lineThrough {
+
+  text-decoration: line-through;
+
+}

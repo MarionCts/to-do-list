@@ -1,0 +1,92 @@
+// ********* IMPORT STYLES *********
+
+// BASE
+@use "abstracts" as *;
+@use "base";
+@use "components/buttons";
+
+// ********** MAIN STYLE ***********
+
+// GENERAL STYLES
+
+.task__container {
+  @include flex-preset(row, center, center);
+  margin: 2rem 0 1rem;
+
+  @media screen and (max-width: 400px) {
+    @include flex-preset(column, center, center);
+    width: 100%;
+    padding: 0 3rem;
+  }
+}
+
+#taskInput {
+  padding: 1.2rem;
+  width: 35rem;
+  border: none;
+  border-radius: 1rem 0 0 0;
+
+  @media screen and (max-width: 400px) {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+  }
+}
+
+.primary-button {
+  border-radius: 0 1rem 0 0;
+
+  @media screen and (max-width: 400px) {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+ul {
+  @include flex-preset(column, flex-start, flex-start);
+  gap: 1rem;
+  margin: 2rem 0;
+  max-width: 28rem;
+
+  @media screen and (max-width: 400px) {
+    padding: 0 3rem;
+  }
+
+  li {
+    font-weight: 400;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    .task__text {
+      line-height: 1.5rem;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+      height: 1rem;
+    }
+
+    button {
+      cursor: pointer;
+      padding-left: 2rem;
+      margin-left: auto;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+
+      img {
+        height: 1.1rem;
+        width: 1.1rem;
+      }
+    }
+  }
+}
+
+#clearBtn {
+  margin-top: 1rem;
+  border-radius: 0 1rem 0 1rem;
+}
+
+#counter {
+  margin-top: 2rem;
+}

@@ -1,0 +1,27 @@
+// ********* IMPORT STYLES *********
+
+@use "../abstracts" as *;
+
+
+// *********** GLOBALS *************
+
+// BODY CONTAINER
+
+body {
+
+  min-height: 100vh;
+  padding: 5rem 0;
+  font-family: $sans-serif;
+  background-color: $midnight;
+  color: $sugar;
+  @include flex-preset(column, center, center);
+
+}
+
+// HIDING ELEMENTS
+
+.hide {
+
+  display: none;
+  
+}
