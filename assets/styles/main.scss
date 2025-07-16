@@ -47,9 +47,9 @@
 
 ul {
   @include flex-preset(column, flex-start, flex-start);
-  gap: 1rem;
-  margin: 2rem 0;
-  max-width: 28rem;
+  gap: 1.5rem;
+  margin: 4rem 0;
+  max-width: 48rem;
 
   @media screen and (max-width: 400px) {
     padding: 0 3rem;
@@ -59,21 +59,20 @@ ul {
     font-weight: 400;
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     .task__text {
-      line-height: 1.5rem;
+      line-height: 2.2rem;
     }
 
     input[type="checkbox"] {
-      margin-right: 0.5rem;
-      height: 1rem;
+      margin: .5rem 1rem 0 0;
     }
 
     button {
       cursor: pointer;
       padding-left: 2rem;
-      margin-left: auto;
+      margin: .5rem 0 0 1rem;
       background-color: transparent;
       border: none;
       display: flex;
