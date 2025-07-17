@@ -7,7 +7,7 @@
 
 // ********** MAIN STYLE ***********
 
-// GENERAL STYLES
+// Style of the task input & extra style of the "Add a task" button
 
 .task__container {
   @include flex-preset(column, center, center);
@@ -42,13 +42,7 @@
   }
 }
 
-.primary-button {
-  border-radius: 0 0 1rem 1rem;
-
-  @include media (550px) {
-    border-radius: 0 1rem 0 0;
-  }
-}
+// Style of the tasks list
 
 ul {
   @include flex-preset(column, flex-start, flex-start);
@@ -75,23 +69,10 @@ ul {
     input[type="checkbox"] {
       margin: 0.5rem 1rem 0 0;
     }
-
-    button {
-      cursor: pointer;
-      padding-left: 2rem;
-      margin: 0.5rem 0 0 1rem;
-      background-color: transparent;
-      border: none;
-      display: flex;
-      justify-content: center;
-
-      .remove__button {
-        height: 1.1rem;
-        width: 1.1rem;
-      }
-    }
   }
 }
+
+// Extra style of the "clear all" button
 
 #clearBtn {
   margin-top: 1rem;

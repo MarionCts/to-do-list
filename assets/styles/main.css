@@ -19,7 +19,7 @@ html {
 p, span, ul, li, .task__text {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
 }
 
 .italic-accent {
@@ -58,10 +58,32 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   transition: all 0.3s linear;
+  border-radius: 0 0 1rem 1rem;
 }
 .primary-button:hover {
   background-color: #f1f0f9;
   color: #202022;
+}
+@media (min-width: 550px) {
+  .primary-button {
+    border-radius: 0 1rem 0 0;
+  }
+}
+
+.remove__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-left: 2rem;
+  margin: 0.5rem 0 0 1rem;
+  background-color: transparent;
+  border: none;
+}
+.remove__button img {
+  height: 1.1rem;
+  width: 1.1rem;
 }
 
 .task__container {
@@ -105,15 +127,6 @@ body {
   }
 }
 
-.primary-button {
-  border-radius: 0 0 1rem 1rem;
-}
-@media (min-width: 550px) {
-  .primary-button {
-    border-radius: 0 1rem 0 0;
-  }
-}
-
 ul {
   display: flex;
   flex-direction: column;
@@ -144,19 +157,6 @@ ul li .task__text {
 }
 ul li input[type=checkbox] {
   margin: 0.5rem 1rem 0 0;
-}
-ul li button {
-  cursor: pointer;
-  padding-left: 2rem;
-  margin: 0.5rem 0 0 1rem;
-  background-color: transparent;
-  border: none;
-  display: flex;
-  justify-content: center;
-}
-ul li button .remove__button {
-  height: 1.1rem;
-  width: 1.1rem;
 }
 
 #clearBtn {

@@ -17,7 +17,7 @@ const clearDOM = () => {
   }
 };
 
-// Creates a span text under the "clear all" button that show the number of all pending tasks
+// Creates a span text under the "clear all" button that shows the number of all pending tasks
 const counter = document.createElement("span");
 counter.id = "counter";
 body.append(counter);
@@ -48,9 +48,8 @@ const updateCounter = () => {
   }
 };
 
-// MAIN FUNCTION 
+// MAIN FUNCTION
 const render = () => {
-
   clearDOM();
 
   // Creation of the HTML elements of the tasks list
@@ -67,17 +66,12 @@ const render = () => {
     label.textContent = task.task;
     label.classList.add("task__text");
 
-    // UI feature: when a task is checked, the task is crossed out
-    if (task.done) {
-      label.classList.add("lineThrough");
-      taskList.appendChild(createTask);
-    }
-
     // UI feature: adding a cross icon as decoration for the remove button
     let createRemoveBtn = document.createElement("button");
+    createRemoveBtn.classList.add("remove__button");
+
     let removeBtn = document.createElement("img");
     removeBtn.src = "../assets/img/remove.svg";
-    removeBtn.classList.add("remove__button");
 
     // Appending the HTML elements in the tasks list
     createTask.append(checkbox);
@@ -87,6 +81,7 @@ const render = () => {
 
     // When a task is checked, the task is either appended in the tasks list, or is removed from it
     if (task.done) {
+      label.classList.add("lineThrough");
       taskList.appendChild(createTask);
     } else {
       taskList.prepend(createTask);
@@ -107,10 +102,10 @@ const render = () => {
       task.done = checkbox.checked;
       label.classList.toggle("lineThrough", task.done);
       localStorage.setItem("task", JSON.stringify(tasks));
+      render();
 
       // We're couting the tasks again to update the text that indicates the pending tasks
       updateCounter();
-
     });
 
     removeClearBtn();

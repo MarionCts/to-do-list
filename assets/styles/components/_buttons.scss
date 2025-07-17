@@ -10,21 +10,14 @@
 
 .primary-button {
 
-  cursor: pointer;
-  background-color: transparent;
-  border: 0.1rem solid $sugar;
-  color: $sugar;
-  padding: 1rem 3rem;
-  border-radius: 0 1rem 0 0;
-  font-weight: 600;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  transition: all 0.3s linear;
+  @include button-preset(primary-button);
 
-  &:hover {
-    background-color: $sugar;
-    color: $midnight;
-  }
+}
 
+// REMOVE BUTTON
+
+.remove__button {
+
+  @include button-preset(remove-button);
+  
 }

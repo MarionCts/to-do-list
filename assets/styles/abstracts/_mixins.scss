@@ -15,12 +15,10 @@
 // FLEXBOX PRESET
 
 @mixin flex-preset($direction: row, $align: center, $justify: center) {
-
   display: flex;
   flex-direction: $direction;
   align-items: $align;
   justify-content: $justify;
-
 }
 
 // TYPOGRPAHY
@@ -35,7 +33,48 @@
   } @else if $type == paragraph {
     font-family: $sans-serif;
     font-weight: 500;
-    font-size: 1.6rem;
-  } 
+    font-size: 1.7rem;
+  }
+}
 
+// BUTTONS
+
+@mixin button-preset($type) {
+
+  @if $type == primary-button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0.1rem solid $sugar;
+    color: $sugar;
+    padding: 1rem 3rem;
+    border-radius: 0 1rem 0 0;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    transition: all 0.3s linear;
+    border-radius: 0 0 1rem 1rem;
+
+    &:hover {
+      background-color: $sugar;
+      color: $midnight;
+    }
+
+    @include media(550px) {
+      border-radius: 0 1rem 0 0;
+    }
+
+  } @else if $type == remove-button {
+      @include flex-preset(column, center, center);
+      cursor: pointer;
+      padding-left: 2rem;
+      margin: 0.5rem 0 0 1rem;
+      background-color: transparent;
+      border: none;
+
+      img {
+        height: 1.1rem;
+        width: 1.1rem;
+      }
+  }
 }
