@@ -4,6 +4,14 @@
 
 // ************ MIXINS *************
 
+// ----- MEDIA QUERIES -----
+
+@mixin media($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
+
 // FLEXBOX PRESET
 
 @mixin flex-preset($direction: row, $align: center, $justify: center) {

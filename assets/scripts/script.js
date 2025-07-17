@@ -67,12 +67,13 @@ const render = () => {
     label.textContent = task.task;
     label.classList.add("task__text");
 
-    // UI feature : when a task is checked, the task is crossed out
+    // UI feature: when a task is checked, the task is crossed out
     if (task.done) {
       label.classList.add("lineThrough");
       taskList.appendChild(createTask);
     }
 
+    // UI feature: adding a cross icon as decoration for the remove button
     let createRemoveBtn = document.createElement("button");
     let removeBtn = document.createElement("img");
     removeBtn.src = "../assets/img/remove.svg";
