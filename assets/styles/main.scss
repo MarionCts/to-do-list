@@ -46,7 +46,7 @@
 
 ul {
   @include flex-preset(column, flex-start, flex-start);
-  gap: 1.5rem;
+  gap: 2.2rem;
   margin: 4rem 0;
   padding: 0 3rem;
 
@@ -62,7 +62,6 @@ ul {
     @include flex-preset(row, flex-start, space-between);
 
     .task__text {
-      line-height: 2.2rem;
       margin-right: auto;
     }
 

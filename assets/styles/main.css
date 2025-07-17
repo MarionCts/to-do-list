@@ -19,7 +19,8 @@ html {
 p, span, ul, li, .task__text {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 
 .italic-accent {
@@ -132,7 +133,7 @@ ul {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 1.5rem;
+  gap: 2.2rem;
   margin: 4rem 0;
   padding: 0 3rem;
 }
@@ -152,7 +153,6 @@ ul li {
   justify-content: space-between;
 }
 ul li .task__text {
-  line-height: 2.2rem;
   margin-right: auto;
 }
 ul li input[type=checkbox] {
