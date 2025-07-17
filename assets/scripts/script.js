@@ -71,7 +71,7 @@ const render = () => {
     createRemoveBtn.classList.add("remove__button");
 
     let removeBtn = document.createElement("img");
-    removeBtn.src = "../assets/img/remove.svg";
+    removeBtn.src = "assets/img/remove.svg";
 
     // Appending the HTML elements in the tasks list
     createTask.append(checkbox);
