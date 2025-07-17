@@ -135,8 +135,8 @@ ul li {
   list-style: none;
   display: flex;
   flex-direction: row;
-  align-items: space-between;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 ul li .task__text {
   line-height: 2.2rem;
